@@ -67,7 +67,7 @@ h3{
 .border{
   width: 28%;
   height: 65vh;
-  float: right;
+  float: left;
   background-color: grey;
   margin: 2%;
   box-shadow: 0px 0px 16px rgb(18, 18, 18);

@@ -9,7 +9,7 @@ function Image(){
         <div className="container1">
           <div className="child">
           <div className="img1">  
-          <img src={state.urlToImage}></img>
+          <img src={state.image}></img>
            <button className="btn" onClick={()=>navigate(-1)}>GO TO DASHBOARD</button>
           </div>
           </div>
