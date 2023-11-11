@@ -6,8 +6,10 @@ function Shivam(){
     let [arr,setarr]=useState([])
     const navigate=useNavigate()
     async function load(){
-        const response=await axios.get('https://api.slingacademy.com/v1/sample-data/photos')
-        let array=response.data.photos
+        const response=await axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=2aec46dc39574b299956cb26ce1ccc8a')
+        console.log(response)
+        let array=response.data.articles
+        setarr(array)
         for(let i=0;i<array.length;i++){
             setarr((prev)=>{
                 return [
@@ -28,15 +30,18 @@ function Shivam(){
        load()
     },[])
     return(
-        
-        <div className='chg'>
-          <Header/>
+        <>
+        <Header/>
+        <div className='container'>
          {arr.map((items,index)=>(
+            items.urlToImage &&
             <div className='border' onClick={()=>{navigate('/img',{state:items})}}>
-            <img src={items.url} />
+            <img src={items.urlToImage} />
+            <h3>{items.title}</h3>
             </div>
-         ))}
+            ))}
        </div>
+       </>
     )
 }
 export default Shivam

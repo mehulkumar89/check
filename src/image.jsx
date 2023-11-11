@@ -6,16 +6,16 @@ function Image(){
   console.log(state)
     return(
         <>
-        <div className="container">
+        <div className="container1">
           <div className="child">
-          <div>  
-          <img src={state.url}></img>
+          <div className="img1">  
+          <img src={state.urlToImage}></img>
            <button className="btn" onClick={()=>navigate(-1)}>GO TO DASHBOARD</button>
           </div>
           </div>
           <div className="subchild">
-          <h2>{state.name}</h2>
-          <h3>{state.description}</h3>
+          <h3 className="col">{state.title}</h3>
+          <h3 className="col_1">{state.description}</h3>
           </div>
         </div>
         </>
