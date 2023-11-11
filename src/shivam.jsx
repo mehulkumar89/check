@@ -9,22 +9,8 @@ function Shivam(){
         const response=await axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey=2aec46dc39574b299956cb26ce1ccc8a')
         console.log(response)
         let array=response.data.articles
-        setarr(array)
-        for(let i=0;i<array.length;i++){
-            setarr((prev)=>{
-                return [
-                    ...prev,
-                    {
-                        name:array[i].title,
-                        url:array[i].url,
-                        description:array[i].description
-                    }
-                ]
-            })
-        }
-        
+        setarr(array)        
     }
-
 
     useEffect(()=>{
        load()
