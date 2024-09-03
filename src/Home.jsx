@@ -47,7 +47,7 @@ function Shivam(){
         document.getElementById("main").style.marginLeft = "0px";
      }
     return(
-        <>
+        <div className='Main'>
         <div className='head'>{title}</div>
         <div id="mySidebar" class="sidebar">
             <a href="#" class="closebtn" onClick={() => closeNav()}>×</a>
@@ -66,13 +66,13 @@ function Shivam(){
         <div className='container'>
          {arr.map((items,index)=>(
             items.image &&
-            <div className='border' onClick={()=>{navigate('/img',{state:items})}}>
+            <div className='container_01' onClick={()=>{navigate('/img',{state:items})}}>
             <img src={items.image} />
             <h3>{items.title}</h3>
             </div>
             ))}
        </div>
-       </>
+       </div>
     )
 }
 export default Shivam
